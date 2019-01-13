@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>記憶卡牌配對</title>
+  <link rel="stylesheet" href="./assets/materialize.min.css">
+  <link rel="stylesheet" href="./assets/style.css">
+  <script src="./assets/materialize.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <h2 class="title">記憶卡牌配對</h2>
+  </header>
+  <div class="info">
+    <div id="score">
+      已配對: 0
+    </div>
+    <div id="time">
+      花費時間: 0 秒
+    </div>
+  </div>
+  <!-- Start Modal Start -->
+  <div id="startModal" class="modal">
+    <div class="modal-content">
+      <h4>遊戲選單</h4>
+      <p class="des">遊戲說明: </p>
+      <p class="des">相信大家小時候都有用撲克牌或是其他類型紙牌玩過記憶配對的遊戲，這個遊戲的設計就是源自這個想法，並將卡牌樣式與我期中的作品結合，以高雄的特色景點最為圖片。</p>
+      <br>
+      <p class="des">遊戲一開始，會有十秒的時間讓玩家記憶卡片的內容，隨後卡片就會覆蓋起來，考驗玩家的記憶力 OuO</p>
+    </div>
+    <div class="modal-footer">
+      <button class="modal-close waves-effect waves-light btn-flat red" id="start">
+        <span class="text-light">開始遊戲 !</span>
+      </button>
+    </div>
+  </div>
+  <!-- Start Modal End -->
+  <!-- End Modal Start -->
+  <div id="endModal" class="modal">
+    <div class="modal-content">
+      <h4>🎉🎉 遊戲結束 🎉🎉</h4>
+    </div>
+  </div>
+  <!-- End Modal End -->
+  <!-- Game View Start -->
+  <div class="wrap" id="view">
+  </div>
+  <!-- Game View End -->
+</body>
+<script src="./assets/game.js"></script>
+
+</html>

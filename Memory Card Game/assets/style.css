@@ -1,0 +1,94 @@
+body {
+  background-image: url('./img/bg.png');
+  background-position: center center;
+  background-size: cover;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.text-light {
+  color: #fafafa;
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  letter-spacing: 15px;
+  font-weight: bold;
+  color: #3A9BC5;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.des {
+  font-size: 24px;
+}
+
+.info {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  color: #fafafa;
+  font-size: 1.2rem;
+}
+
+.info div {
+  padding: 0 10px;
+}
+
+.card {
+  width: 250px;
+  height: 300px;
+  margin: 20px 10px;
+  perspective: 600px;
+  background-color: inherit;
+}
+
+.card-body {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-body img {
+  width: 100%;
+  height: 100%;
+}
+
+.card-style {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 300px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  backface-visibility: hidden;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.cover {
+  background-image: url('./img/card-bg.png');
+  background-position: center center;
+  background-size: cover;
+}
+
+.content {
+  border: 5px solid #fafafa;
+  transform: rotateY(180deg);
+}
