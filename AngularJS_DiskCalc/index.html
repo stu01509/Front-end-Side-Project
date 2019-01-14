@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-hant-tw">
+
+<head>
+  <!-- Meta Start -->
+  <meta charset="utf-8">
+  <title>硬碟容量換算</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <Meta http-equiv="Expires" Content="0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="author" content="Cliif Su">
+  <meta name="copyright" content="翻轉科技">
+  <meta name="description" content="">
+  <meta name="distribution" content="Taiwan">
+  <meta name="generator" content="Atom">
+  <meta name="msvalidate.01" content="DE1476DB1972648CC5A34305E8679807" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="libs/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.bootcss.com/angular.js/1.6.6/angular.min.js"></script>
+  <script src="libs/nav-shrink.js"></script>
+
+  <!-- Meta End -->
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+  <nav id="nav" class="navbar navbar-inverse navbar-fixed-top navbar-no-bg nav-style" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">硬碟容量換算 - FlipTech</a>
+      </div>
+      <div class="collapse navbar-collapse" id="top-navbar-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="index.html">首頁</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--Title and Input Box Start-->
+  <div class="container main">
+    <header>
+      <h1 class="text-center title" style="font-size:48px; ">硬碟容量換算</h1>
+    </header>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="input-group ">
+          <input type="number" min="1" class="form-control input-bar" name="x" ng-model="num" placeholder="輸入硬碟大小">
+          <div class="input-group-btn search-panel">
+            <select ng-model="selectedSite" ng-options="x.unit for x in units" class="select-btn">
+              <option value="">請選擇單位</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Google AD 上方 End-->
+  <!--換算結果 Start-->
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <main>
+          <table id="mytable" class="table table-bordred table-striped">
+            <thead>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <h3>實際硬碟大小: {{num * selectedSite.site / 1024 | number: 3 || "0"}} KB</h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h3>實際硬碟大小: {{num * selectedSite.site / 1048576 | number: 3 || "0"}} MB</h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h3>實際硬碟大小: {{num * selectedSite.site / 1073741824 | number: 3 || "0"}} GB</h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h3>實際硬碟大小: {{num * selectedSite.site / 1099511627776 | number: 3 || "0"}} TB</h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h3>實際硬碟大小: {{num * selectedSite.site / 1125899906842624 | number: 3 || "0"}} PB</h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h3>實際硬碟大小: {{num * selectedSite.site / 1152921504606846976 | number: 3 || "0"}} EB</h3>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </main>
+      </div>
+    </div>
+  </div>
+  <!--換算結果 End-->
+  <!--Angular JS 運算式 Start-->
+  <script src="libs/diskcalc.js"></script>
+  <!--Angular JS 運算式 End-->
+
+
+</body>
+
+</html>
